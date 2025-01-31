@@ -1,0 +1,23 @@
+@use "../../styles/colors";
+
+:host {
+    height: 0;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    padding: 1rem;
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: colors.$primary-white;
+    line-height: 1.5;
+
+    strong {
+        color: colors.$secondary-theme;
+        
+        &.title {
+            color: colors.$primary-theme;
+        }
+    }
+}

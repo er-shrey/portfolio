@@ -1,0 +1,48 @@
+@use "../../styles/colors";
+
+:host {
+    height: 100%;
+    min-width: 3rem;
+    display: flex;
+    flex-direction: column;
+    background-color: colors.$primary-background;
+    border-right: 1px solid colors.$primary-border;
+
+    .menu {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+            height: 3rem;
+            width: 100%;
+            border-left: 2px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            img {
+                height: 1.5rem;
+                opacity: 0.7;
+            }
+
+            &.active {
+                border-left: 2px solid colors.$primary-theme;
+
+                img {
+                    opacity: 1;
+                }
+            }
+
+            &:hover {
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .user-menu {
+        margin-top: auto;
+    }
+}

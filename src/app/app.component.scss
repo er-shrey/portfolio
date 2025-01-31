@@ -1,0 +1,49 @@
+@use "./styles/colors";
+
+:host {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .work-area {
+        height: 0;
+        flex-grow: 1;
+        display: flex;
+
+        .router-area {
+            flex-grow: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: colors.$page-background;
+
+            .page-title {
+                height: 2rem;
+                background-color: colors.$primary-background;
+                border-bottom: 1px solid colors.$primary-border; 
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-right: 0.5rem;
+
+                .page-tab {
+                    background-color: colors.$page-background;
+                    border-right: 1px solid colors.$primary-border;
+                    border-top: 2px solid colors.$primary-theme;
+                    padding: 0.4rem 0.5rem 0.5rem 0.5rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    
+                    img {
+                        height: 0.875rem;
+                    }
+
+                    span {
+                        font-size: 0.825rem;
+                    }
+                }
+            }
+        }
+    }
+}

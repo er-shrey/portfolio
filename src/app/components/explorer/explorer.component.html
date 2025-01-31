@@ -1,0 +1,19 @@
+<!-- title bar -->
+<div class="title">
+    <span>EXPLORER</span>
+    <span>...</span>
+</div>
+<!-- folders -->
+<div class="folder">
+    <img src="icons/chevron-down.svg" alt="expand">
+    <span>PORTFOLIO</span>
+</div>
+<!-- files -->
+<ul class="files">
+    @for (file of files; track file.fileName) {
+        <li class="file" [routerLink]="[file.route]">
+            <img [src]="'icons/'+ file.icon + '.png'" [alt]="file.icon">
+            <span> {{file.fileName}} </span>
+        </li>
+    }
+</ul>

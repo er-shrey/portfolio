@@ -1,0 +1,31 @@
+@use "../../styles/colors";
+
+:host {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: colors.$primary-background;
+    border-bottom: 1px solid colors.$primary-border;
+
+    .remote-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.125rem 0.5rem;
+        background-color: colors.$primary-theme;
+    }
+
+    .icon {
+        height: 0.875rem;
+
+        &.bell {
+            margin-left: auto;
+            margin-right: 0.5rem;
+        }
+    }
+
+    span {
+        font-size: 0.75rem;
+        font-weight: 400;
+    }
+}

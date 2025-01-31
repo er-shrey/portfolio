@@ -1,0 +1,16 @@
+<app-toolbar></app-toolbar>
+<div class="work-area">
+    <app-sidebar></app-sidebar>
+    <app-explorer></app-explorer>
+    <div class="router-area">
+        <div class="page-title">
+            <div class="page-tab">
+                <img [src]="'icons/' + pageIcon + '.png'" [alt]="pageIcon">
+                <span> {{ pageName }} </span>
+            </div>
+            <img src="icons/git-compare.svg" alt="git-compare">
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,26 @@
+
+@if (githubData) {
+    <div class="card" (click)="goToGithub()">
+        <div class='main'>
+            <img class='avatar-image' [src]="githubData['avatar_url']" alt="avatar" />
+            <h2>{{ githubData.login }}</h2>
+            <p class='bio'>{{ githubData.bio }}</p>
+            <div class='details'>
+                <div class="followers">
+                <ins>Followers</ins>
+                <p> {{githubData.followers}} </p>
+                </div>
+                <div class="repos">
+                <ins>Repos</ins>
+                <p> {{ githubData.public_repos }} </p>
+                </div>
+            </div>
+            <hr />
+            <div class='chart'>
+                <div class='wrapper'>
+                    <img src="https://ghchart.rshah.org/er-shrey" alt="git-chart" />
+                </div>
+            </div>
+        </div>
+    </div>
+}

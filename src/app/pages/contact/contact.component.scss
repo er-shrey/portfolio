@@ -1,0 +1,57 @@
+@use "../../styles/colors";
+
+:host {
+    height: 0;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    padding: 1rem;
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .line {
+        display: flex;
+
+        .number {
+            color: colors.$editor-border;
+            font-weight: 400;
+            margin-right: 1rem;
+        }
+    
+        .comment {
+            color: colors.$tertiary-theme;
+        }
+
+        .class-name {
+            color: colors.$secondary-theme;
+            margin-right: 0.5rem;
+        }
+
+        .bracket {
+            color: colors.$primary-theme;
+        }
+
+        .key {
+            margin-left: 3rem;
+            color: colors.$primary-white;
+        }
+
+        .value {
+            margin-left: 0.5rem;
+            color: colors.$secondary-theme;
+            text-decoration: none;
+            cursor: pointer;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .symbol {
+            color: colors.$primary-theme;
+        }
+    }
+}
+

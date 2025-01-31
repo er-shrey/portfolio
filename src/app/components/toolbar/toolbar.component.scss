@@ -1,0 +1,80 @@
+@use "../../styles/colors";
+
+:host {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: colors.$primary-background;
+    padding: 0.4rem 0.5rem;
+    border-bottom: 1px solid colors.$primary-border; 
+
+    .logo {
+        height: 1rem;
+    }
+
+    .menu {
+        font-size: 0.875rem;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        cursor: auto;
+
+        .menu-item {
+            user-select: none;
+            padding: 0.25rem 0.5rem;
+            &:hover {
+                border-radius: 0.25rem;
+                background-color: colors.$secondary-background;
+            }
+        }
+    }
+
+    .central-bar {
+        margin-left: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .title-panel {
+            margin: 0 0.5rem;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            height: 1.5rem;
+            border: 1px solid colors.$editor-border;
+            background-color: colors.$editor-background;
+            width: 30vw;
+        }
+
+        .icon {
+            height: 1rem;
+        }
+    }
+
+    .layout-icons {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .icon {
+            height: 1rem;
+        }
+    }
+
+    .windows-actions {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-left: 1rem;
+
+        .icon {
+            height: 1rem;
+            cursor: pointer;
+        }
+    }
+}

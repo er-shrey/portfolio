@@ -1,0 +1,55 @@
+@use "../../styles/colors";
+
+:host {
+    height: 0;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    padding: 1rem;
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .line {
+        display: flex;
+
+        .number {
+            color: colors.$editor-border;
+            font-weight: 400;
+            width: 2rem;
+        }
+
+        .bracket {
+            color: colors.$primary-theme;
+
+            &.json {
+                margin-left: 4rem;
+            }
+        }
+
+        .key {
+            margin-left: 3rem;
+            color: colors.$primary-white;
+
+            &.json {
+                margin-left: 7rem;
+            }
+        }
+
+        .value {
+            margin-left: 0.5rem;
+            color: colors.$secondary-theme;
+            text-decoration: none;
+            cursor: pointer;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .symbol {
+            color: colors.$primary-theme;
+        }
+    }
+}

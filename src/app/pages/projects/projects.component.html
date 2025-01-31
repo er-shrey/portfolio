@@ -1,0 +1,33 @@
+<div class="line">
+    <span class="number"> {{ getCounter() }}</span>
+    <span class="bracket"> [ </span>
+</div>
+@for (project of projects; track $index) {
+    <div class="line">
+        <span class="number"> {{ getCounter() }}</span>
+        <span class="bracket json"> &#123;</span>
+    </div>
+    <div class="line">
+        <span class="number"> {{ getCounter() }}</span>
+        <span class="key json"> Project Name </span>
+        <span class="symbol">:</span>
+        <span class="value"> "{{ project.name }}" </span>
+        <span class="symbol">,</span>
+    </div>
+    <div class="line">
+        <span class="number"> {{ getCounter() }}</span>
+        <span class="key json"> Description </span>
+        <span class="symbol">:</span>
+        <span class="value"> "{{ project.description }}" </span>
+        <span class="symbol">,</span>
+    </div>
+    <div class="line">
+        <span class="number"> {{ getCounter() }}</span>
+        <span class="bracket json"> &#125;</span>
+        <span class="symbol">,</span>
+    </div>
+}
+<div class="line">
+    <span class="number"> {{ getCounter() }}</span>
+    <span class="bracket"> ] </span>
+</div>
